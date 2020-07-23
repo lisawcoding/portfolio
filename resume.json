@@ -1,6 +1,6 @@
 {
     "intro": {
-        "en": "introduction",
+        "en": "about",
         "zh": "簡介"
     },
     "skills": {
@@ -12,7 +12,7 @@
         "zh": "作品集"
     },
     "contact": {
-        "en": "contact me",
+        "en": "contact",
         "zh": "連絡我"
     },
     "coverLetter": {
