@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> -->
-      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+      <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
 
       <meta name="keywords" content="developer, front-end developer, profolio, 前端工程師" />
       <meta name="description" content="最專業的前端工程師, best web developer" />
@@ -39,30 +39,31 @@
       <main class="pimg1">
          <section class="section coverletter">
             <div class="container">
-               <div class="id-photo swiper-container">
+               <!-- <div class="id-photo swiper-container">
                   <div class="swiper-wrapper">
-                        <!-- <img src="img/me.jpg" alt="me" class="slide-active" class="swiper-slide"> -->
                         <img src="img/id_photo.jpg" alt="resume " class="swiper-slide">
                         <img src="img/resume3.jpg" alt="id photo" class="swiper-slide">                     
                   </div>
-                  <!-- <div class="dots">
-                     <div class="arrow prev"></div>
-                     <div class="dot dot-active"></div>
-                     <div class="dot"></div>
-                     <div class="dot"></div>
-                     <div class="arrow next"></div>
-                 </div> -->
                  <div class="arrow prev swiper-button-prev"></div>
                  <div class="swiper-pagination"></div>
                  <div class="arrow next swiper-button-next"></div>
-               </div>
-               <a rel="noopener" href="https://github.com/lisawcoding" target="_blank">
-                  <img src="img/icon/github.png" alt="github icon">
-               </a>
+               </div> -->
                <article>
-                  <h2 data-lan="intro"></h2>
+                  <!-- <h2 data-lan="intro"></h2> -->
+                  <h1 data-lan="myname" class="myname"></h1>
                   <ul data-list="coverLetter">
                   </ul>
+                  <div class="icon-div">
+                     <a rel="noopener" href="https://github.com/lisawcoding" target="_blank">
+                        <img src="img/icon/github.png" alt="github icon">
+                        <span>GitHub</span> 
+                     </a>
+                     <a href="/img/resume.pdf" download>
+                        <img src="img/icon/resume.png" alt="download">
+                        <span>Resume</span>
+                     </a>
+                  </div>
+
                </article>
             </div>
          </section>
@@ -70,35 +71,84 @@
          <section class="section skills">
             <div class="container">
                   <h2 data-lan="skills"></h2>
-                  <ul class="topic" data-list="topic">
-                  </ul>
+                  <!-- <ul class="topic" data-list="topic"></ul> -->
+                  <div class="skill-list">
+                     <ul class="code">
+                        <li><img src='img/icon/code.png' alt='see code'></li>
+                        <li>HTML</li>
+                        <li>CSS/SASS</li>
+                        <li>JavaScript</li>
+                        <!-- <li>framework</li> -->
+                        <li>React</li>
+                        <li>JQuery</li>
+                        <li>Bootstrap</li>
+                     </ul>
+                     <ul class="tool">
+                        <li><img src='img/icon/tool.png' alt='tool'></li>
+                        <li>Git</li>
+                        <li>Github</li>
+                        <li>Chrome Developer Tools</li>
+                        <li>Visual Studio Code</li>
+                     </ul>
+                  </div>
                   <div class="description">
                      <h3 data-lan="desc"></h3>
                      <ul data-list="description"></ul>
                   </div>
             </div>
          </section>
-         <!--projects---------------------------------------------------------------------------------------------------------------------------    -->
-         <section class="section projects">
-            <div class="container">
-               <h2 data-lan="project"></h2>
-                  <div class="cards-div">
-                     <div class="clone">
-                        <p class="year"></p>
-                        <a rel="noopener" href="#" target="_blank"  style="position:relative">
-                           <img src="" alt="">
-                           <div class="title"><i></i></div>
-                           <ul class="description"> 
-                           </ul>
-                        </a>
+            <!--projects---------------------------------------------------------------------------------------------------------------------------    -->
+            <!-- <section class="section projects">
+               <div class="container">
+                  <h2 data-lan="project"></h2>
+                     <div class="cards-div">
+                        <div class="clone"  style="position:relative">
+                              <img src="" alt="">
+                              <div class="title"></div>
+                              <p class="year"></p>
+                              <ul class="description"></ul>
+                              <div class="button-div">
+                                 <a rel="noopener" href="#" target="_blank" class="viewsite">Demo</a>
+                                 <a rel="noopener" href="#" target="_blank" class="viewcode">&#60;/&#62;</a>                                 
+                              </div>
+                        </div>
                      </div>
-                  </div>
-            </div>   
-         </section>
+               </div>   
+            </section> -->
+            <section class="section projects">
+               <div class="container">
+                  <h2 data-lan="project"></h2>
+                     <div class="cards-div">
+                        <div class="clone"  style="position:relative">
+                           <!-- <div class="img-wrapper"> -->
+                             <img src="" alt=""> 
+                           <!-- </div> -->
+                              
+                              <div class="title"></div>
+                              <p class="year"></p>
+                              <div class="info">
+                                 <ul class="description"></ul>
+                                 <!-- <p data-lan="skillused"></p> -->
+                                 <ul class="skill-used"></ul>
+                              </div>
+                              <div class="button-div">
+                                 <!-- <a rel="noopener" href="#" target="_blank" class="viewsite">Demo</a>
+                                 <a rel="noopener" href="#" target="_blank" class="viewcode">&#60;/&#62;</a>                                  -->
+                                 <a rel="noopener" href="#" target="_blank" class="viewsite"><img src="img/icon/open-new-window.png" alt="open new window"></a>
+                                 <a rel="noopener" href="#" target="_blank" class="viewcode"><img src="img/icon/code.png" alt="see code"></a>    
+                              </div>
+                        </div>
+                     </div>
+               </div>   
+            </section>
          <!-- contact form--------------------------------------------------------------------------------------------------------------------------------- -->
          <section class="section contact">
             <div class="container">
                <h2 data-lan="contact"></h2>
+               <ul>
+                  <li>TEL: +886 986755992</li>
+                  <li>email: tolisacoding@gmail.com</li>
+               </ul>
                <div class="icons">
                   <!-- <a rel="noopener" href="https://goo.gl/maps/gqocZvEtw1p2XZon7" target="_blank"><i class="fas fa-map-marker-alt"></i>map</a>
                   <a rel="noopener" href="tel:+886908117599"><i class="fas fa-phone" style="transform: scale(.9);"></i>phone</a>
@@ -114,19 +164,19 @@
                   <a rel="noopener" href="sms:+886908117599"><img src="img/icon/sms.png" alt="sms icon">sms</a>
                </div>
                <form>
-                  <label for='name'></label>
-                  <input type="text" name="name" placeholder="Name" required id="name">
-                  <label for='phone'></label>
-                  <input type = "tel" name="phone" placeholder = "Phone or Email" id="phone" required/>
-                  <label for="message"></label>
-                  <textarea name="message" id="" cols="30" rows="10" placeholder="Message" required id="message"></textarea>
+                  <label for='name'>name</label>
+                  <input type="text" id="name" name="name" placeholder="Name" required>  
+                  <label for="tel">tel</label>
+                  <input id="tel" type = "tel" name="phone" placeholder = "Phone or Email" required/>
+                  <label for="msg">msg</label>
+                  <textarea name="message" id="msg" cols="30" rows="10" placeholder="Message" required></textarea>
                   <p class="check-number">
                      <span class="a"></span>
                      <span>+</span>
                      <span class="b"></span>
                      <spn>=</spn>
-                     <label for="sum"></label>
-                     <input class="sum" type="number" placeholder="" required id="sum">
+                     <label for="sum">sum</label>
+                     <input class="sum" id="sum" type="number" placeholder="" required>
                   </p>
                   <label for="submit"></label>
                   <input type="submit" value=""data-lan="submit" id="submit">
@@ -149,7 +199,7 @@
          Your browser does not support the audio element.
       </audio>
       
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script> -->
       <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
       <script type="text/javascript" src="resume.js"></script>
    </body>

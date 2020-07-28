@@ -47,17 +47,23 @@ function translate(){
 				cardsDiv.insertBefore(cardCln, cardsDiv.childNodes[0]);
 
 				cardsDiv.querySelector('.card .year').innerText=eval(`p.year.${lan}`);
-				cardsDiv.querySelector('.card a').href=card.link;
+				cardsDiv.querySelector('.card .viewsite').href=card.link;
+				cardsDiv.querySelector('.card .viewcode').href=card.github;
 				cardsDiv.querySelector('.card img').src=card.img;
 				cardsDiv.querySelector('.card img').alt=eval(`card.${lan}.title`);
 				cardsDiv.querySelector('.card .title').innerText=eval(`card.${lan}.title`)
 
 				eval(`card.${lan}.des`).map(d=>{
 					var node=document.createElement("li");
-					// node.setAttribute("class", "fas fa-paw");
 					var nodetext=document.createTextNode(d);
 					node.appendChild(nodetext);	
 					cardsDiv.querySelector(".card .description").appendChild(node);
+				})
+				eval(`card.${lan}.skillUsed`).map(d=>{
+					var node=document.createElement("li");
+					var nodetext=document.createTextNode(d);
+					node.appendChild(nodetext);	
+					cardsDiv.querySelector(".card .skill-used").appendChild(node);
 				})
 			})
 		})
@@ -162,7 +168,7 @@ window.addEventListener("scroll",function(){
 //navItem active on click	
 function clickNav(n){
 	// window.scrollTo(0, sections[n].offsetTop-navbar.offsetHeight+1);
-	window.scrollTo(0, sections[n].offsetTop-52);
+	window.scrollTo(0, sections[n].offsetTop-26);
 	document.querySelector(".game").play();
 	
 	if(window.getComputedStyle(hamburger).getPropertyValue("display")=="flex"){
@@ -173,11 +179,19 @@ function clickNav(n){
 	navItems[n].classList.add("active");
 }
 
+// document.querySelector(".seeProjects").addEventListener("click", function(){
+// 	clickNav(2)
+// })
+
 //hambuerger
 hamburger.addEventListener("click", function(){
 	navItemContainer.classList.toggle("drop-down");
 	this.classList.toggle("change");
 })
+document.querySelector(".pimg1").addEventListener("click", function(){
+	navItemContainer.classList.remove("drop-down");
+})
+
 //id photo slider*************************************************************************
 // var imgs=document.querySelectorAll(".slide-inner img");
 // var slideInner=document.querySelector(".slide-inner");
@@ -270,31 +284,31 @@ hamburger.addEventListener("click", function(){
 //     slideAction();
 // })
 // hero slider
-var idSwiper = new Swiper('.id-photo', {
-	speed: 600,
-	spaceBetween: 0,
-	autoplay: {
-	  delay: 2000,
-	  // disableOnInteraction: false,
-	},
-	loop: true,
-	grabCursor: true,
-	navigation: {
-	  nextEl: '.id-photo .swiper-button-next',
-	  prevEl: '.id-photo .swiper-button-prev',
-	},
-	pagination: {
-	  el: '.id-photo .swiper-pagination',
-	  clickable: true,
-	},
-  });
-  const swiperContainer=document.querySelector(".swiper-container");
-  swiperContainer.addEventListener("mouseover", function(){
-	idSwiper.autoplay.stop();
-  })
-  swiperContainer.addEventListener("mouseout", function(){
-	idSwiper.autoplay.start();
-  })
+// var idSwiper = new Swiper('.id-photo', {
+// 	speed: 600,
+// 	spaceBetween: 0,
+// 	autoplay: {
+// 	  delay: 2000,
+// 	  // disableOnInteraction: false,
+// 	},
+// 	loop: true,
+// 	grabCursor: true,
+// 	navigation: {
+// 	  nextEl: '.id-photo .swiper-button-next',
+// 	  prevEl: '.id-photo .swiper-button-prev',
+// 	},
+// 	pagination: {
+// 	  el: '.id-photo .swiper-pagination',
+// 	  clickable: true,
+// 	},
+//   });
+//   const swiperContainer=document.querySelector(".swiper-container");
+//   swiperContainer.addEventListener("mouseover", function(){
+// 	idSwiper.autoplay.stop();
+//   })
+//   swiperContainer.addEventListener("mouseout", function(){
+// 	idSwiper.autoplay.start();
+//   })
 
 // form sumbmit^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 //initialize Firebase
