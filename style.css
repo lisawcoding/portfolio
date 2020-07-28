@@ -251,6 +251,8 @@ h3{
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
+    display: -moz-box;
+    display: -webkit-flex;
 }
 .skills .skill-list li:first-child {
     list-style-type: none;
