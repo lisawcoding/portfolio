@@ -1,4 +1,7 @@
-let lan;
+// var navHeight=window.getComputedStyle(document.querySelector('nav')).getPropertyValue('height')
+
+let navHeight=75;
+
 if((navigator.language || navigator.browserLanguage).toLowerCase()!="zh-tw"){
 	lan="en";
 } else {
@@ -39,18 +42,20 @@ function translate(){
 
 		data.projects.map(p=>{
 				console.log(p)
-			p.cards.forEach(function(card){
+				p.cards.forEach(function(card){
 				console.log(p);
 				var cardCln=document.querySelector('.projects .clone').cloneNode(true);
 				const cardsDiv=document.querySelector('.cards-div');
 				cardCln.setAttribute('class', 'card');
 				cardsDiv.insertBefore(cardCln, cardsDiv.childNodes[0]);
 
-				cardsDiv.querySelector('.card .year').innerText=eval(`p.year.${lan}`);
+				// cardsDiv.querySelector('.card .year').innerText=eval(`p.year.${lan}`);
 				cardsDiv.querySelector('.card .viewsite').href=card.link;
 				cardsDiv.querySelector('.card .viewcode').href=card.github;
-				cardsDiv.querySelector('.card img').src=card.img;
-				cardsDiv.querySelector('.card img').alt=eval(`card.${lan}.title`);
+				cardsDiv.querySelector('.card .overlay .viewsite').href=card.link;
+				cardsDiv.querySelector('.card .overlay .viewcode').href=card.github;
+				cardsDiv.querySelector('.project-img').src=card.img;
+				cardsDiv.querySelector('.project-img').alt=eval(`card.${lan}.title`);
 				cardsDiv.querySelector('.card .title').innerText=eval(`card.${lan}.title`)
 
 				eval(`card.${lan}.des`).map(d=>{
@@ -138,6 +143,7 @@ document.querySelectorAll(".language-container li:not([class*=hamburger])").forE
 
 //navbar active seleted
 let navItems=document.querySelectorAll(".navItem");
+// let navItems=document.querySelectorAll(".navItem-container li");
 let sections=document.querySelectorAll("section");
 
 function removeActive(){
@@ -166,30 +172,44 @@ window.addEventListener("scroll",function(){
 
 
 //navItem active on click	
-function clickNav(n){
-	// window.scrollTo(0, sections[n].offsetTop-navbar.offsetHeight+1);
-	window.scrollTo(0, sections[n].offsetTop-26);
-	document.querySelector(".game").play();
+document.querySelectorAll('.navItem').forEach((item, i)=>{
+	item.addEventListener('click', ()=>{
+		window.scrollTo(0, sections[i].offsetTop-navHeight);
+		document.querySelector('.game').play()
+
+		if(window.getComputedStyle(hamburger).getPropertyValue('display')==='flex'){
+			navItemContainer.classList.remove('drop-down');
+			hamburger.classList.remove('change')
+		}
+	})
+})
+
+// function clickNav(n){
+// 	// window.scrollTo(0, sections[n].offsetTop-navbar.offsetHeight+1);
+
+// 	window.scrollTo(0, sections[n].offsetTop-26);
+// 	document.querySelector(".game").play();
 	
-	if(window.getComputedStyle(hamburger).getPropertyValue("display")=="flex"){
-		navItemContainer.classList.remove("drop-down");
-		hamburger.classList.remove("change");
-	}
-	removeActive();
-	navItems[n].classList.add("active");
-}
+// 	if(window.getComputedStyle(hamburger).getPropertyValue("display")=="flex"){
+// 		navItemContainer.classList.remove("drop-down");
+// 		hamburger.classList.remove("change");
+// 	}
+// 	removeActive();
+// 	navItems[n].classList.add("active");
+// }
 
 // document.querySelector(".seeProjects").addEventListener("click", function(){
 // 	clickNav(2)
 // })
 
-//hambuerger
+//remove drop-down menu
 hamburger.addEventListener("click", function(){
 	navItemContainer.classList.toggle("drop-down");
 	this.classList.toggle("change");
 })
-document.querySelector(".pimg1").addEventListener("click", function(){
+document.querySelector(".pimg1").addEventListener("click", ()=>{
 	navItemContainer.classList.remove("drop-down");
+	hamburger.classList.remove('change')
 })
 
 //id photo slider*************************************************************************
@@ -379,17 +399,15 @@ function saveMessage(name, phone, message){
 }
 
 // //go to Top Btn^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-var topBtn=document.querySelector("#topBtn");
-window.onscroll = function() {showScrollBtn()};
-
-function showScrollBtn() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+window.addEventListener('scroll', function(){
+    if (document.body.scrollTop > navHeight || document.documentElement.scrollTop > navHeight) {
         topBtn.style.display = "block";
     } else{
         topBtn.style.display = "none";
-}
-}
-function goToTop() {
+	}		
+}) 
+
+document.querySelector("#topBtn").addEventListener('click',()=>{
 	document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
+})

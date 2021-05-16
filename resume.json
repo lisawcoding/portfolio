@@ -1,10 +1,9 @@
 {
 
     "myname": {
-        "en":"Yuting Wang",
+        "en":"Hellon, my name is Yuting Wang",
         "zh": "王玉婷"
     },
-
     "intro": {
         "en": "about",
         "zh": "簡介"
@@ -27,16 +26,12 @@
     },
     "coverLetter": {
         "en": [
-           "front End Developer",
-           "a self-taught Front-end Developer with 1 year of work experience."
+           "a experienced front-end web developer, also equiped MERM stack web development sills",
+           "From vanilla javascript, Web Components and UI/UX animations to React.JS, Node.JS."
         ],
         "zh": [
-            "玉婷自學網頁設計,主要為前端網頁部份。非常熟悉HTML，CSS/SCSS和JavaScript及各框架（如：Bootstrap, jQuery等），且會看技術文件接API等。",
-            "CSS切版部份熟悉flexbox, 及grid的應用。",
-            "因為是自學，所以遇到新的網頁效果、新的框架、新的技術等都可以很快的自行在網路上找到資源，解決問題。",
-            "有一年的前端開發工作經驗。第一份工作內容有開發維護網路商城的網站。工作分為2部份：優化及更新現有網頁，開發新的新網頁，主要是依美術的圖做切版及網頁視覺效果，RWD版型、UX互動，網頁動態效果...等。第二份工作主要是關發新的遊戲說明頁、選單、遊戲表、註單，主要是負責版型及接API。",
-            "現在自學React，對程式非常有興趣。",
-            "希望有機會可以為貴公司服務，謝謝！"
+            "玉婷工作主要為前端網頁部份。熟悉HTML，CSS/SCSS，JavaScript, React及各框架，接API及後端技術node。",
+            "因為是自學，所以遇到新的網頁效果、新的框架、新的技術等都可以很快的自行在網路上找到資源，解決問題。"
         ]
     },
     "desc": {
@@ -98,8 +93,8 @@
         "zh": "你的資料已送出, 謝謝您~"
     },
     "alert_ng": {
-        "en": "Wrong code, try again please",
-        "zh": "密碼錯誤，請再試一次"
+        "en": "try again please",
+        "zh": "驗證碼錯誤，請再試一次"
     },
     "topic": {
         "en": [
@@ -203,6 +198,36 @@
                                 "HTML", "CSS", "JavaScript"
                             ]
                         }
+                }, 
+                {
+                    "img": "img/todolist.png",
+                    "link": "https://lisawcoding.github.io/TodoList/",
+                    "github": "https://github.com/lisawcoding/TodoList",
+                    "en": 
+                        {   
+                            "title": "Todo List",
+                            "des": [
+                                "use firebase to store the data"
+                            ],
+                            "skillUsed":[
+                                "React",
+                                "HTML", "SASS", "JavaScript",
+                                "firebase"
+                            ]
+                        },
+                    "zh":
+                        {
+                            "title": "記事本",
+                            "des": [
+                                "用HTML, SASS, JavaScript, React",
+                                "結合firebase存取資料"
+                            ],
+                            "skillUsed":[
+                                "React",
+                                "HTML", "SASS", "JavaScript",
+                                "firebase"
+                            ]
+                        }
                 }
             ]
         },
@@ -291,7 +316,7 @@
                                 "game and score sheet function"
                             ],
                             "skillUsed":[
-                                "React(Hooks, Context, Router)",
+                                "React",
                                 "HTML", "SASS", "JavaScript",
                                 "PokéAPI"
                             ]
@@ -308,36 +333,6 @@
                                 "React",
                                 "HTML", "SASS", "JavaScript",
                                 "PokéAPI"
-                            ]
-                        }
-                },
-                {
-                    "img": "img/todolist.png",
-                    "link": "https://lisawcoding.github.io/TodoList/",
-                    "github": "https://github.com/lisawcoding/TodoList",
-                    "en": 
-                        {   
-                            "title": "Todo List",
-                            "des": [
-                                "use firebase to store the data"
-                            ],
-                            "skillUsed":[
-                                "React(Hooks, Context, Router)",
-                                "HTML", "SASS", "JavaScript",
-                                "firebase"
-                            ]
-                        },
-                    "zh":
-                        {
-                            "title": "記事本",
-                            "des": [
-                                "用HTML, SASS, JavaScript, React",
-                                "結合firebase存取資料"
-                            ],
-                            "skillUsed":[
-                                "React",
-                                "HTML", "SASS", "JavaScript",
-                                "firebase"
                             ]
                         }
                 }

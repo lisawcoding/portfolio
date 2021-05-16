@@ -19,18 +19,18 @@
       <nav class="navbar">
          <div class="container">
             <ul class="navItem-container">
-               <li class="navItem active" onclick="clickNav(0)" data-lan="intro"></li>
-               <li class="navItem" onclick="clickNav(1)" data-lan="skills"></li>
-               <li class="navItem" onclick="clickNav(2)" data-lan="project"></li>
-               <li class="navItem" onclick="clickNav(3)" data-lan="contact"></li>
+               <li class="navItem active" data-lan="intro"></li>
+               <li class="navItem" data-lan="skills"></li>
+               <li class="navItem" data-lan="project"></li>
+               <li class="navItem" data-lan="contact"></li>
             </ul>
             <ul class="language-container">
                <li id="zh" >文</li>
                <li id="en">A</li>
                <li class="hamburger">
-                  <span class="bar1"></span>
-                  <span class="bar2"></span>
-                  <span class="bar3"></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
                </li>
             </ul>
          </div>
@@ -39,42 +39,34 @@
       <main class="pimg1">
          <section class="section coverletter">
             <div class="container">
-               <!-- <div class="id-photo swiper-container">
-                  <div class="swiper-wrapper">
-                        <img src="img/id_photo.jpg" alt="resume " class="swiper-slide">
-                        <img src="img/resume3.jpg" alt="id photo" class="swiper-slide">                     
-                  </div>
-                 <div class="arrow prev swiper-button-prev"></div>
-                 <div class="swiper-pagination"></div>
-                 <div class="arrow next swiper-button-next"></div>
-               </div> -->
                <article>
-                  <!-- <h2 data-lan="intro"></h2> -->
-                  <h1 data-lan="myname" class="myname"></h1>
-                  <ul data-list="coverLetter">
-                  </ul>
+                  <h2 data-lan="myname" class="myname"></h2>
+                  <ul data-list="coverLetter"></ul>
                   <div class="icon-div">
                      <a rel="noopener" href="https://github.com/lisawcoding" target="_blank">
-                        <img src="img/icon/github.png" alt="github icon">
+                        <img src="img/icon/github.svg" alt="github icon">
                         <span>GitHub</span> 
                      </a>
                      <a href="/img/resume.pdf" download>
-                        <img src="img/icon/resume.png" alt="download">
+                        <img src="img/icon/resume.png" alt="download icon">
                         <span>Resume</span>
                      </a>
                   </div>
-
                </article>
             </div>
          </section>
          <!--skills---------------------------------------------------------------------------------------------------------------------------------------->
-         <section class="section skills">
+         <section class="section skills" id='skills'>
             <div class="container">
-                  <h2 data-lan="skills"></h2>
-                  <!-- <ul class="topic" data-list="topic"></ul> -->
+                  <h1>web developer portfolio</h1>
+                  <p>
+                     
+                  </p>
                   <div class="skill-list">
-                     <ul class="code">
-                        <li><img src='img/icon/code.png' alt='see code'></li>
+                     <ul class="code button">
+                        <!-- <li> -->
+                          <img src="img/icon/view_code.svg" alt='code svg' />
+                        <!-- </li> -->
                         <li>HTML</li>
                         <li>CSS/SASS</li>
                         <li>JavaScript</li>
@@ -83,103 +75,101 @@
                         <li>JQuery</li>
                         <li>Bootstrap</li>
                      </ul>
-                     <ul class="tool">
-                        <li><img src='img/icon/tool.png' alt='tool'></li>
+                     <ul class="tool button">
+                           <img src='img/icon/tool.svg' alt='tool image'>
                         <li>Git</li>
                         <li>Github</li>
-                        <li>Chrome Developer Tools</li>
+                        <li>Chrome DevTools</li>
                         <li>Visual Studio Code</li>
                      </ul>
-                  </div>
-                  <div class="description">
-                     <h3 data-lan="desc"></h3>
-                     <ul data-list="description"></ul>
                   </div>
             </div>
          </section>
             <!--projects---------------------------------------------------------------------------------------------------------------------------    -->
-            <!-- <section class="section projects">
-               <div class="container">
-                  <h2 data-lan="project"></h2>
-                     <div class="cards-div">
-                        <div class="clone"  style="position:relative">
-                              <img src="" alt="">
-                              <div class="title"></div>
-                              <p class="year"></p>
-                              <ul class="description"></ul>
-                              <div class="button-div">
-                                 <a rel="noopener" href="#" target="_blank" class="viewsite">Demo</a>
-                                 <a rel="noopener" href="#" target="_blank" class="viewcode">&#60;/&#62;</a>                                 
-                              </div>
-                        </div>
-                     </div>
-               </div>   
-            </section> -->
             <section class="section projects">
                <div class="container">
-                  <h2 data-lan="project"></h2>
                      <div class="cards-div">
-                        <div class="clone"  style="position:relative">
-                           <!-- <div class="img-wrapper"> -->
-                             <img src="" alt=""> 
-                           <!-- </div> -->
-                              
-                              <div class="title"></div>
-                              <p class="year"></p>
-                              <div class="info">
-                                 <ul class="description"></ul>
-                                 <!-- <p data-lan="skillused"></p> -->
-                                 <ul class="skill-used"></ul>
+                        <div class="clone">
+                           <div class="top-div">
+                              <div class="title-bar">
+                                    <div class="button-div">
+                                       <a rel="noopener" target="_blank" href="" class="viewsite">
+                                          <img src="img/icon/view_site.svg" alt="viewsite icon"/>                 
+                                       </a>
+                                       <a rel="noopener" target="_blank" class="viewcode" href="">
+                                          <img src="img/icon/view_code.svg" alt="viewcode icon"/>
+                                       </a>    
+                                    </div>
+                                 <p class="title"></p>
                               </div>
-                              <div class="button-div">
-                                 <!-- <a rel="noopener" href="#" target="_blank" class="viewsite">Demo</a>
-                                 <a rel="noopener" href="#" target="_blank" class="viewcode">&#60;/&#62;</a>                                  -->
-                                 <a rel="noopener" href="#" target="_blank" class="viewsite"><img src="img/icon/open-new-window.png" alt="open new window"></a>
-                                 <a rel="noopener" href="#" target="_blank" class="viewcode"><img src="img/icon/code.png" alt="see code"></a>    
+                              <div class="img-wrapper">
+                                 <img class="project-img" src="" alt=""> 
+                                 <div class="overlay button">
+                                    <a rel="noopener" target="_blank" class="viewsite" href="" >
+                                       <img src="img/icon/view_site.svg" alt="viewsite icon"/>   
+                                       view the website              
+                                    </a>
+                                    <a rel="noopener" target="_blank" class="viewcode" href="" >
+                                       <img src="img/icon/view_code.svg" alt="viewcode icon" />
+                                       view on Github
+                                    </a>    
+                                 </div>
                               </div>
+                           </div>
+                           <div class="info">
+                              <ul class="description"></ul>
+                              <ul class="skill-used button"></ul>
+                           </div>
                         </div>
                      </div>
                </div>   
             </section>
          <!-- contact form--------------------------------------------------------------------------------------------------------------------------------- -->
-         <section class="section contact">
+         <section class="section contact" id='contact-section'>
             <div class="container">
-               <h2 data-lan="contact"></h2>
-               <ul>
-                  <li>TEL: +886 986755992</li>
-                  <li>email: tolisacoding@gmail.com</li>
-               </ul>
-               <div class="icons">
-                  <!-- <a rel="noopener" href="https://goo.gl/maps/gqocZvEtw1p2XZon7" target="_blank"><i class="fas fa-map-marker-alt"></i>map</a>
-                  <a rel="noopener" href="tel:+886908117599"><i class="fas fa-phone" style="transform: scale(.9);"></i>phone</a>
-                  <a rel="noopener" href="sms:+886908117599"><i class="fas fa-comment-dots sms"></i>sms</a>
-                  <a rel="noopener" href="https://line.me/ti/p/11C3BFzUOA" target="_blank"><i class="fab fa-line"></i>line</a>
-                  <a rel="noopener" href="skype:lisa.wang27?call"><i class="fab fa-skype"></i>skype</a>
-                  <a rel="noopener" href="mailto:tolisacoding@gmail.com" rel="nofollow" target="_blank"><i class="fas fa-envelope email"></i>email</a> -->
-                  <a rel="noopener" href="tel:+886908117599"><img src="img/icon/phone.png" alt="phone icon">phone</a>
-                  <a rel="noopener" href="https://goo.gl/maps/gqocZvEtw1p2XZon7" target="_blank"><img src="img/icon/map.png" alt="map icon">map</a>
-                  <a rel="noopener" href="https://line.me/ti/p/11C3BFzUOA" target="_blank"><img src="img/icon/line.png" alt="line icon">line</a>
-                  <a rel="noopener" href="skype:lisa.wang27?call"><img src="img/icon/skype.png" alt="skype icon">skype</a>
-                  <a rel="noopener" href="mailto:tolisacoding@gmail.com" rel="nofollow" target="_blank"><img src="img/icon/gmail.png" alt="email icon">email</a>
-                  <a rel="noopener" href="sms:+886908117599"><img src="img/icon/sms.png" alt="sms icon">sms</a>
+               <div class="left-div">
+                  <h2 data-lan="contact"></h2>
+                  <ul>
+                     <li>TEL: +886 908117599</li>
+                     <li>email: tolisacoding@gmail.com</li>
+                  </ul>
+                  <div class="icons">
+                     <a rel="noopener" href="tel:+886908117599"><img src="img/icon/phone.png" alt="phone icon"></a>
+                     <a rel="noopener" href="https://goo.gl/maps/gqocZvEtw1p2XZon7" target="_blank"><img src="img/icon/map.png" alt="map icon"></a>
+                     <a rel="noopener" href="https://line.me/ti/p/11C3BFzUOA" target="_blank"><img src="img/icon/line.png" alt="line icon"></a>
+                     <a rel="noopener" href="skype:lisa.wang27?call"><img src="img/icon/skype.png" alt="skype icon"></a>
+                     <a rel="noopener" href="mailto:tolisacoding@gmail.com" rel="nofollow" target="_blank"><img src="img/icon/gmail.png" alt="email icon"></a>
+                     <a rel="noopener" href="sms:+886908117599"><img src="img/icon/sms.png" alt="sms icon"></a>
+                  </div>
                </div>
+
                <form>
-                  <label for='name'>name</label>
+                  <!-- <label for='name'>name</label>
                   <input type="text" id="name" name="name" placeholder="Name" required>  
                   <label for="tel">tel</label>
                   <input id="tel" type = "tel" name="phone" placeholder = "Phone or Email" required/>
                   <label for="msg">msg</label>
-                  <textarea name="message" id="msg" cols="30" rows="10" placeholder="Message" required></textarea>
-                  <p class="check-number">
-                     <span class="a"></span>
-                     <span>+</span>
-                     <span class="b"></span>
-                     <spn>=</spn>
-                     <label for="sum">sum</label>
-                     <input class="sum" id="sum" type="number" placeholder="" required>
-                  </p>
-                  <label for="submit"></label>
-                  <input type="submit" value=""data-lan="submit" id="submit">
+                  <textarea name="message" id="msg" cols="30" rows="10" placeholder="Message" required></textarea> -->
+                  <label for='name'>
+                     <input type="text" id="name" name="name" placeholder="Name" required>
+                  </label>
+                  <label for="tel">
+                     <input id="tel" type = "tel" name="phone" placeholder = "Phone or Email" required/>
+                  </label>
+                  <label for="msg">
+                     <textarea name="message" id="msg" rows="6" placeholder="Message" required></textarea>
+                  </label>
+                  <div class="submit-div">
+                     <p class="check-number">
+                        <span class="a"></span>+<span class="b"></span>=
+                        <label for="sum">
+                           <input class="sum" id="sum" type="number" placeholder="" required>
+                        </label>
+                     </p>
+                     <label for="submit">
+                        <input type="submit" value=""data-lan="submit" id="submit">      
+                     </label>
+                  </div>
                   <div class="alert">
                      <div class="alert-ok" data-lan="alert_ok"></div>
                      <div class="alert-ng" data-lan="alert_ng"></div>
@@ -191,7 +181,7 @@
             <div class="banner"></div>
          </div>
       </main>
-      <div id="topBtn" class="overlay" onclick="goToTop()">
+      <div id="topBtn" class="overlay">
       </div>
       <!--audio^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^-->
       <audio class="game">
