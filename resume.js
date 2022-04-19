@@ -332,15 +332,7 @@ document.querySelector(".pimg1").addEventListener("click", ()=>{
 
 // form sumbmit^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 //initialize Firebase
- var config = {
-    apiKey: "AIzaSyDiCsaX3HCEqJbtCHYrPDIdtrw9LTYEIek",
-    authDomain: "contactform-c2a0c.firebaseapp.com",
-    databaseURL: "https://contactform-c2a0c.firebaseio.com",
-    projectId: "contactform-c2a0c",
-    storageBucket: "contactform-c2a0c.appspot.com",
-    messagingSenderId: "205647187411"
-  };
-   firebase.initializeApp(config);
+firebase.initializeApp(config);
    
 //reference messages collection
 var messagesRef=firebase.database().ref("messages");
